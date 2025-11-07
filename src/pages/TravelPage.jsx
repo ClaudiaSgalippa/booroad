@@ -1,3 +1,3 @@
 export default function TravelPage() {
-  return <div>travel</div>;
+	return <div>travel</div>;
 }
