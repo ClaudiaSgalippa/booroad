@@ -37,6 +37,7 @@ L'applicazione sarà disponibile su `http://localhost:5173` (porta predefinita d
 - `npm run build`: Costruisce l'app per la produzione
 - `npm run lint`: Esegue il controllo del codice con ESLint
 - `npm run preview`: Anteprima dell'app costruita
+- `npm run pretty`: Formatta il codice con Prettier per .js, .jsx e .json
 
 ## 📁 Struttura del Progetto
 
@@ -46,6 +47,10 @@ L'applicazione sarà disponibile su `http://localhost:5173` (porta predefinita d
   - `main.jsx`: Punto di ingresso
 - `public/`: File statici
 - `vite.config.js`: Configurazione di Vite
+
+## 🎨 Formattazione del Codice
+
+Il progetto utilizza Prettier per mantenere uno stile di codice consistente. Esegui `npm run pretty` per formattare automaticamente i file .js, .jsx e .json.
 
 ## 🤝 Contributi
 
