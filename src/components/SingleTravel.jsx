@@ -7,12 +7,12 @@ export default function SingleTravel(props) {
 	return (
 		<div className="col-5">
 			<Link to={`/users/${trav.id}`}>
-				<div className="bg-secondary">
-					<p>{trav.destinazione}</p>
-					<p>{trav.nazione}</p>
-					<p>{trav.dataInizio}</p>
+				<div className="bg-secondary p-3">
+					<h3>{trav.destinazione}</h3>
+					<h5>{trav.nazione}</h5>
+					<i>{trav.dataInizio}</i>
 					<p>{trav.dataFine}</p>
-					<p>{trav.luogoDiCulto}</p>
+					<em>{trav.luogoDiCulto}</em>
 				</div>
 			</Link>
 		</div>
