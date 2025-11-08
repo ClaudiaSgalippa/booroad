@@ -7,7 +7,13 @@ export default function MyHeader() {
 	return (
 		<header className="bg-light">
 			<div className="container-wide py-1 d-flex justify-content-between align-items-center">
-					<Link to="/"><img src={logo} alt="BooRoad" style={{ height: '300px', width: '300px' }} /></Link>
+				<Link to="/">
+					<img
+						src={logo}
+						alt="BooRoad"
+						style={{ height: "300px", width: "300px" }}
+					/>
+				</Link>
 				{location.pathname === "/users" && (
 					<Link to="/" className="btn btn-primary">
 						Torna alla Homepage

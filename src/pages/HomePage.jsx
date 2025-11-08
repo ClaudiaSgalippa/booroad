@@ -1,13 +1,16 @@
+import { useState } from "react";
 import TravelList from "../components/TravelList";
+import HomeSearchBar from "../components/searchcomponents/HomeSearchBar";
 
 const HomePage = () => {
+	const [search, setSearch] = useState("");
+
 	return (
-		<>
-			<div className="container-wide">
-				<h1>Viaggi disponibili</h1>
-				<TravelList />
-			</div>
-		</>
+		<div className="container-wide">
+			<h1>Viaggi disponibili</h1>
+			<HomeSearchBar search={search} onSearch={setSearch} />
+			<TravelList search={search} />
+		</div>
 	);
 };
 
