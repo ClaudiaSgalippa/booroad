@@ -1,13 +1,10 @@
 export default function TravelFormPage() {
 	return (
 		<div className="container">
-			<form className="mt-5" onSubmit={""}>
+			<form className="mt-5">
 				<div className="mb-3">
 					<label className="form-label">Città</label>
 					<input
-						name="destinazione"
-						value={""}
-						onChange={""}
 						type="name"
 						className="form-control"
 						aria-describedby="emailHelp"
@@ -17,8 +14,6 @@ export default function TravelFormPage() {
 					<label className="form-label">Immagine</label>
 					<input
 						name="destinazione"
-						value={""}
-						onChange={""}
 						type="text"
 						className="form-control"
 						aria-describedby="emailHelp"
