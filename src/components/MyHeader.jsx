@@ -20,24 +20,24 @@ export default function MyHeader() {
 				<div>
 					{isHomepage && (
 						<div>
-							<Link to="travel/add" className="btn btn-primary m-5">
+							<Link to="travel/add" className="btn btn-success m-5">
 								Aggiungi un viaggio
 							</Link>
 						</div>
 					)}
 					{isTravelPage && (
 						<div className="d-flex gap-3">
-							<Link to="users/add" className="btn btn-primary">
+							<Link to="users/add" className="btn btn-success">
 								Aggiungi un partecipante
 							</Link>
-							<Link to="/" className="btn btn-primary">
+							<Link to="/" className="btn btn-success">
 								Torna alla Homepage
 							</Link>
 						</div>
 					)}
 					{isAddPage && (
 						<div>
-							<button onClick={() => navigate(-1)} className="btn btn-primary">
+							<button onClick={() => navigate(-1)} className="btn btn-success">
 								Torna indietro
 							</button>
 						</div>
