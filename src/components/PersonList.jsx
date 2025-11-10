@@ -1,21 +1,19 @@
-import partecipanti from "../data/partecipanti";
+import { useParams } from "react-router-dom";
+import viaggi from "../data/viaggi";
 import SinglePerson from "./SinglePerson";
 
-const PersonList = ({ search }) => {
-	const query = (search || "").toLowerCase().trim();
-	const filteredPersons = partecipanti.filter((t) =>
-		`${t.nome} ${t.cognome}`.toLowerCase().includes(query),
-	);
+const PersonList = () => {
+	const { id } = useParams();
+
+	const viaggio = viaggi.find((v) => v.id === Number(id));
+
+	const partecipanti = viaggio ? viaggio.partecipanti || [] : [];
 
 	return (
 		<div className="container-wide">
-			{filteredPersons.length === 0 ? (
-				<p>Nessun partecipante trovato corrispondente alla tua ricerca.</p>
-			) : (
-				filteredPersons.map((person) => (
-					<SinglePerson key={person.id} person={person} />
-				))
-			)}
+			{partecipanti.map((person) => (
+				<SinglePerson key={person.id} person={person} />
+			))}
 		</div>
 	);
 };
