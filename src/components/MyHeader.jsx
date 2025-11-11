@@ -1,5 +1,6 @@
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logoBig from "../assets/BoolRoad.png";
+import logoSmall from "../assets/BR-favicon.png";
 
 export default function MyHeader() {
 	const location = useLocation();
@@ -12,31 +13,45 @@ export default function MyHeader() {
 	const navigate = useNavigate();
 	return (
 		<header>
-			<div className="container-wide py-1 d-flex justify-content-between align-items-center">
+			<div className="container-wide py-4 py-1 d-flex justify-content-between align-items-center">
 				<Link to="/">
-					<img src={logo} alt="BooRoad" id="logo" />
+					<img
+						src={logoBig}
+						alt="BooRoad"
+						id="logo"
+						className="d-none d-md-block img-fluid logo-desktop"
+					/>
+					<img
+						src={logoSmall}
+						alt="BooRoad"
+						id="logo"
+						className="d-block d-md-none img-fluid logo-mobile"
+					/>
 				</Link>
 				<div>
 					{isHomepage && (
 						<div>
-							<Link to="travel/add" className="btn btn-success m-5">
+							<Link to="travel/add" className="btn btn-danger">
 								Aggiungi un viaggio
 							</Link>
 						</div>
 					)}
 					{isTravelPage && (
 						<div className="d-flex gap-3">
-							<Link to={idPageAdd} className="btn btn-success">
+							<Link to={idPageAdd} className="btn btn-danger d-none d-md-block">
 								Aggiungi un partecipante
 							</Link>
-							<Link to="/" className="btn btn-success">
-								Torna alla Homepage
+							<Link to={idPageAdd} className="btn btn-danger d-block d-md-none">
+								<i class="fa-solid fa-user-plus"></i>
+							</Link>
+							<Link to="/" className="btn btn-danger">
+								<i class="fa-solid fa-house"></i>
 							</Link>
 						</div>
 					)}
 					{isAddPage && (
 						<div>
-							<button onClick={() => navigate(-1)} className="btn btn-success">
+							<button onClick={() => navigate(-1)} className="btn btn-danger">
 								Torna indietro
 							</button>
 						</div>

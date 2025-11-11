@@ -19,18 +19,18 @@ export default function SinglePerson({ person }) {
 				{person.nome} {person.cognome}
 			</h2>
 			{isOpen && (
-				<div className="accordion-appear">
+				<div className="accordion-appear pt-3">
 					<h5>
 						<a href={mailLink}>
 							Email: <span className="text-info">{person.email}</span>
 						</a>
 					</h5>
-					<h5>
+					<h5 className="pt-2">
 						<a href={telLink}>
 							Telefono: <span className="text-info">{person.telefono}</span>
 						</a>
 					</h5>
-					<h5>CF: {person.CF}</h5>
+					<h5 className="pt-2">CF: {person.CF}</h5>
 				</div>
 			)}
 		</div>
