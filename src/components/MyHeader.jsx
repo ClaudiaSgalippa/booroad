@@ -15,8 +15,18 @@ export default function MyHeader() {
 		<header>
 			<div className="container-wide py-4 py-1 d-flex justify-content-between align-items-center">
 				<Link to="/">
-					<img src={logoBig} alt="BooRoad" id="logo" className="d-none d-md-block img-fluid logo-desktop"/>
-					<img src={logoSmall} alt="BooRoad" id="logo" className="d-block d-md-none img-fluid logo-mobile"/>
+					<img
+						src={logoBig}
+						alt="BooRoad"
+						id="logo"
+						className="d-none d-md-block img-fluid logo-desktop"
+					/>
+					<img
+						src={logoSmall}
+						alt="BooRoad"
+						id="logo"
+						className="d-block d-md-none img-fluid logo-mobile"
+					/>
 				</Link>
 				<div>
 					{isHomepage && (
@@ -28,11 +38,14 @@ export default function MyHeader() {
 					)}
 					{isTravelPage && (
 						<div className="d-flex gap-3">
-							<Link to={idPageAdd} className="btn btn-danger">
+							<Link to={idPageAdd} className="btn btn-danger d-none d-md-block">
 								Aggiungi un partecipante
 							</Link>
+							<Link to={idPageAdd} className="btn btn-danger d-block d-md-none">
+								<i class="fa-solid fa-user-plus"></i>
+							</Link>
 							<Link to="/" className="btn btn-danger">
-								Torna alla Homepage
+								<i class="fa-solid fa-house"></i>
 							</Link>
 						</div>
 					)}
